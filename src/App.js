@@ -22,6 +22,7 @@ const App = () => {
       <AppBar className={classes.appBar} position="static" color="inherit">
         <Typography className={classes.heading} variant="h3" align="center">Famous Aborigines</Typography>
         <img className={classes.image} src={memories} alt="icon" height="60" />
+        
       </AppBar>
       <Grow in>
         <Container>
