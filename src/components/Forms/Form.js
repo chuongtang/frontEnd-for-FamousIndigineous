@@ -36,14 +36,14 @@ const Form = ({ currentId, setCurrentId }) => {
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${post.fullname}"` : 'Create a Famous Card'}</Typography>
-        <TextField name="admirer" variant="outlined" label="Added by" fullWidth value={postData.admirer} onChange={(e) => setPostData({ ...postData, admirer: e.target.value })} />
-        <TextField name="fullname" variant="outlined" label="Fullname" fullWidth value={postData.fullname} onChange={(e) => setPostData({ ...postData, fullname: e.target.value })} />
-        <TextField name="achivement" variant="outlined" label="Achivement" fullWidth multiline rows={4} value={postData.achivement} onChange={(e) => setPostData({ ...postData, achivement: e.target.value })} />
+        <Typography variant="h6">{currentId ? `Editing "${post.fullname}"` : 'Create a Hero Card'}</Typography>
+        <TextField name="admirer" variant="outlined" label="Added by (Admirer's name)" fullWidth value={postData.admirer} onChange={(e) => setPostData({ ...postData, admirer: e.target.value })} />
+        <TextField name="fullname" variant="outlined" label="Your Hero's name" fullWidth value={postData.fullname} onChange={(e) => setPostData({ ...postData, fullname: e.target.value })} />
+        <TextField name="achivement" variant="outlined" label="Hero's Achivement" fullWidth multiline rows={4} value={postData.achivement} onChange={(e) => setPostData({ ...postData, achivement: e.target.value })} />
         <TextField name="tags" variant="outlined" label="Tags (coma separated)" fullWidth value={postData.tags} onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })} />
         <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>
-        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
-        <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
+        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit 🍂</Button>
+        <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear 🍃</Button>
       </form>
     </Paper>
   );
