@@ -5,6 +5,7 @@ import FileBase from 'react-file-base64';
 
 import useStyles from './styles';
 import { createPost, updatePost } from '../../actions/posts';
+import Author from '../Author';
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ admirer: '', name: '', achivement: '', tags: '', selectedFile: '' });
@@ -45,6 +46,7 @@ const Form = ({ currentId, setCurrentId }) => {
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit 🍂</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear 🍃</Button>
       </form>
+      <Author/>
     </Paper>
   );
 };
