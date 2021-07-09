@@ -5,7 +5,7 @@ const Intro = () => {
   
   return ( 
    
-<h6 className='introText'>Celebrating the heritage, diverse cultures and outstanding achievements of 🍁 Indigenous People</h6>
+<h6 className='introText'>Who is your 🍁 Hero? Do you have one to share?</h6>
    );
 }
  
