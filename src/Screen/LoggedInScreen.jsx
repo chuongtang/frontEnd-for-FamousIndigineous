@@ -7,14 +7,14 @@ import Form from '../components/Forms/Form';
 import { getPosts } from '../actions/posts';
 import useStyles from '../styles';
 import memories from '../images/totem.jpg';
-import {useAuth0} from '@auth0/auth0-react';
+// import {useAuth0} from '@auth0/auth0-react';
 
 
 const LoggedInScreen = () => {
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
   const classes = useStyles();
-  const {user} = useAuth0();
+  // const {user} = useAuth0();
 
   useEffect(() => {
     dispatch(getPosts());
