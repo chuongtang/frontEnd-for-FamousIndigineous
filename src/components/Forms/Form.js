@@ -6,12 +6,14 @@ import FileBase from 'react-file-base64';
 import useStyles from './styles';
 import { createPost, updatePost } from '../../actions/posts';
 import Author from '../Author';
+import {useAuth0} from '@auth0/auth0-react';
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ admirer: '', name: '', achivement: '', tags: '', selectedFile: '' });
   const post = useSelector((state) => (currentId ? state.posts.find((achivement) => achivement._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
+  const {user} = useAuth0();
 
   useEffect(() => {
     if (post) setPostData(post);
