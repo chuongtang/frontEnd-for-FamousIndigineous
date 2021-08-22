@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container,  Typography } from '@material-ui/core';
+import { Container, Typography, Paper } from '@material-ui/core';
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from '../src/components/LoginButton';
 import LoggedInScreen from '../src/Screen/LoggedInScreen';
@@ -11,12 +11,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    borderRadius: "1rem",
-    background: "#f1e9e9",
-    boxShadow: "1.25rem 1.25rem 2.5rem #938e8e, -1.25rem - 1.25rem 2.5rem #ffffff",
+    justifyContent: "center",
+    borderRadius: "1.5rem",
+    backgroundColor: "#f8f9fa",
     margin: "2rem",
-    padding: "2rem"
+    padding: "1.5rem ",
+    maxWidth: "30rem"
   },
+  hidden: {
+    visibility: "hidden",
+    maxHeight: "1rem"
+  }
 }));
 
 
@@ -26,17 +31,18 @@ const App = () => {
 
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="lg">
       {!isAuthenticated ? (
-        <Container className={classes.root}>
+        <Paper elevation={3} className={classes.root}>
           <Typography variant="h4" component="h2" gutterBottom>
-            🍁 Indigineous History Makers.
+            Indigineous History Makers.
           </Typography>
           <br></br>
           <HomeScreen />
           <br></br>
           <LoginButton />
-        </Container>
+          <iframe className={classes.hidden} src="https://famousindigenous.herokuapp.com/"></iframe>
+        </Paper>
       ) :
         <div>
           <LogoutButton />
