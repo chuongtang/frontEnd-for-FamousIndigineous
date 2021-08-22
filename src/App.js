@@ -41,7 +41,7 @@ const App = () => {
           <HomeScreen />
           <br></br>
           <LoginButton />
-          <iframe className={classes.hidden} src="https://famousindigenous.herokuapp.com/"></iframe>
+          <iframe title="WakeHeroku" className={classes.hidden} src="https://famousindigenous.herokuapp.com/"></iframe>
         </Paper>
       ) :
         <div>
