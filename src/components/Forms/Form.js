@@ -42,7 +42,7 @@ const Form = ({ currentId, setCurrentId }) => {
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
         <Typography variant="h6">{currentId ? `Editing "${post.fullname}"` : 'Create a Hero Card'}</Typography>
         {/* <TextField name="admirer" variant="outlined" label="Added by (Admirer's name)" fullWidth value={postData.admirer} onChange={(e) => setPostData({ ...postData, admirer: e.target.value })} /> */}
-        <TextField name="admirer" variant="outlined" label="Added by (Admirer's name)" fullWidth value={user.name}  />
+        {/* <TextField name="admirer" variant="outlined" label="Added by (Admirer's name)" fullWidth value={user.name}  /> */}
         <TextField name="fullname" variant="outlined" label="Your Hero's name" fullWidth value={postData.fullname} onChange={(e) => setPostData({ ...postData, fullname: e.target.value })} />
         <TextField name="achivement" variant="outlined" label="Hero's Achivement" fullWidth multiline rows={4} value={postData.achivement} onChange={(e) => setPostData({ ...postData, achivement: e.target.value })} />
         <TextField name="tags" variant="outlined" label="Tags (coma separated)" fullWidth value={postData.tags} onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })} />
