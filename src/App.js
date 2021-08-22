@@ -7,6 +7,7 @@ import Form from './components/Forms/Form';
 import { getPosts } from './actions/posts';
 import useStyles from './styles';
 import memories from './images/totem.jpg';
+import LoginButton from '../src/components/LoginButton';
 
 const App = () => {
   const [currentId, setCurrentId] = useState(0);
@@ -18,25 +19,26 @@ const App = () => {
   }, [currentId, dispatch]);
 
   return (
-    <Container maxWidth="lg">
-      <AppBar className={classes.appBar} position="sticky" color="inherit">
-        <Typography className={classes.heading} variant="h3" align="center">🍁Indigenous History-Makers</Typography>
-        <img className={classes.image} src={memories} alt="icon" height="60" />
+    <LoginButton />
+    // <Container maxWidth="lg">
+    //   <AppBar className={classes.appBar} position="sticky" color="inherit">
+    //     <Typography className={classes.heading} variant="h3" align="center">🍁Indigenous History-Makers</Typography>
+    //     <img className={classes.image} src={memories} alt="icon" height="60" />
         
-      </AppBar>
-      <Grow in>
-        <Container>
-          <Grid container justify="space-between" alignItems="stretch" spacing={3}>
-            <Grid item xs={12} sm={7}>
-              <Posts setCurrentId={setCurrentId} />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Form currentId={currentId} setCurrentId={setCurrentId} />
-            </Grid>
-          </Grid>
-        </Container>
-      </Grow>
-    </Container>
+    //   </AppBar>
+    //   <Grow in>
+    //     <Container>
+    //       <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+    //         <Grid item xs={12} sm={7}>
+    //           <Posts setCurrentId={setCurrentId} />
+    //         </Grid>
+    //         <Grid item xs={12} sm={4}>
+    //           <Form currentId={currentId} setCurrentId={setCurrentId} />
+    //         </Grid>
+    //       </Grid>
+    //     </Container>
+    //   </Grow>
+    // </Container>
   );
 };
 
