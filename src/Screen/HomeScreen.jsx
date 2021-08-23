@@ -33,8 +33,7 @@ const HomeScreen = () => {
         }}
         startDelay={500}
         cursorColor="#3F3D56"
-        text="The first day of summer, June 21ₛₜ, marks National Indigenous Peoples Day, a day to recognize and celebrate First Nations people, Métis, and Inuit in Canada.
-        This project was built to help my kids learn more about Aboriginal cultures, and celebrate the greatness of Indigenous Heroes that they find on the internet. "
+        text="The first day of summer, June 21ˢᵗ, marks National Indigenous Peoples Day, a day to recognize and celebrate First Nations people, Métis∞, and Inuitᐃᓄᐃᑦ in Canada. This project was built to help my children learn more about Aboriginal cultures, and celebrate the greatness of Indigenous Heroes that they find on the internet. "
         loop={true}
         nextTextDelay={1000}
         typeSpeed={60}
